@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 const config = require('config');
 
 AWS.config.update({region: 'us-east-1', accessKeyId: 'akid', secretAccessKey: 'secret'});
-const kinesis = new AWS.Kinesis({endpoint: 'http://kinesis:4567'});
+const kinesis = new AWS.Kinesis({endpoint: config.get('kinesis.endpoint')});
 
 let timer;
 

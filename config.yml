@@ -1,4 +1,5 @@
 kinesis:
+  endpoint: http://kinesis:4567
   streamName: Test_Stream # Name of the kinesis stream
   shardCount: 2 # The number of shards the stream will have
   checkActiveInterval: 5000 # The millisend delay when checking a stream is active
