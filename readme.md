@@ -1,4 +1,8 @@
-# Example of using Kinesis in node.js
+# Example of using Amazon Kinesis in node.js
+
+This is just a small project that has two services. The producer service creates or re-uses a kinesis stream and sends a message to kinesis every so many milliseconds. The consumer service calls get records on each shard in the stream every so many milliseconds and just console logs them out.
+
+I built it in pure node.js using `aws-sdk` library only, no Amazon KCL for Node.js.
 
 # Install
 
@@ -15,3 +19,7 @@ To stop just hit `ctrl-c`.
 # Config
 
 You can play around with the `config.yml` to change how often it does things. If you change any settings in the `config.yml` you will need to run `./install.sh` again.
+
+# Todos
+
+* Add `docker-lambda` and make the producer service just call the lambda just like you can on AWS.
