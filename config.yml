@@ -1,0 +1,7 @@
+kinesis:
+  streamName: Test_Stream # Name of the kinesis stream
+  shardCount: 2 # The number of shards the stream will have
+  checkActiveInterval: 5000 # The millisend delay when checking a stream is active
+addRecordInterval: 10000 # Milliseonds between adding a random record to the kinesis stream
+getRecordsInterval: 1000 # How often in milliseconds to look for records
+maxRecords: 1000 # The max limit of records to return when getting records

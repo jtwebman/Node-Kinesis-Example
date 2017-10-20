@@ -1,0 +1,28 @@
+version: '2.1'
+
+services:
+  consumer:
+    build: ./consumer
+    ports:
+      - "8080:3000"
+    depends_on:
+      kinesis:
+        condition: service_started
+    links:
+      - kinesis
+    volumes:
+      - ./consumer:/usr/src/app
+  kinesis:
+    image: vsouza/kinesis-local
+    command: ['kinesalite']
+    ports:
+     - "4567:4567"
+  producer:
+    build: ./producer
+    depends_on:
+      kinesis:
+        condition: service_started
+    links:
+      - kinesis
+    volumes:
+      - ./producer:/usr/src/app

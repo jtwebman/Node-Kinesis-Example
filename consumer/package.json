@@ -1,0 +1,19 @@
+{
+  "name": "consumer",
+  "version": "1.0.0",
+  "description": "Consumer events from a kinesis stream",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.138.0",
+    "config": "^1.27.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}
