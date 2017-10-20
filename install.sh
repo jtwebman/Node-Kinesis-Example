@@ -10,5 +10,3 @@ popd
 pushd producer/
 npm install
 popd
-
-docker-compose build
